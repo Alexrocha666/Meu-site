@@ -1,19 +1,100 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Jogo do Tigrinho</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Governador Alex - O Alquimista Moderno</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #000;
+            color: gold;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .hero {
+            background: url('https://images.unsplash.com/photo-1620288627223-53302f4e8c74?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center;
+            background-size: cover;
+            padding: 100px 20px;
+        }
+        h1 {
+            font-size: 3.5em;
+            text-shadow: 2px 2px 5px #000;
+        }
+        .slogan {
+            font-size: 1.8em;
+            font-style: italic;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 3px #000;
+        }
+        .plano {
+            background: rgba(0, 0, 0, 0.7);
+            border: 2px solid gold;
+            border-radius: 10px;
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 500px;
+        }
+        button {
+            background: gold;
+            color: #000;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+        }
+        button:hover {
+            background: #ffd700;
+        }
+        .aviso {
+            font-size: 0.8em;
+            color: #ccc;
+            margin-top: 50px;
+        }
+    </style>
 </head>
 <body>
-  <h1>Jogo do Tigrinho</h1>
-  <div class="slot-machine">
-    <div class="reel" id="reel1">🐯</div>
-    <div class="reel" id="reel2">🍒</div>
-    <div class="reel" id="reel3">💰</div>
-  </div>
-  <button onclick="spin()">Girar</button>
-  <p id="result"></p>
-  <script src="script.js"></script>
+    <div class="hero">
+        <h1>GOVERNADOR ALEX</h1>
+        <p class="slogan">"Tripliquei meu dinheiro em 2 dias usando apenas um pote de yakult e sorte no tigrinho!"</p>
+    </div>
+
+    <div class="plano">
+        <h2>PLANO BRONZE</h2>
+        <p>🔥 Dobro seu dinheiro em 3 dias (ou te ensino a fingir que dobrou)!</p>
+        <button onclick="alert('Parabéns! Seu investimento de R$100 virou R$200 (na nossa imaginação). 😂')">INVISTA AGORA</button>
+    </div>
+
+    <div class="plano">
+        <h2>PLANO PRATA</h2>
+        <p>🚀 Triplico seu dinheiro em 5 dias (100% garantido, confia)!</p>
+        <button onclick="alert('Você acaba de virar sócio do esquema! 🎉 Envie um Pix para seu amigo mais próximo e ria muito.')">QUERO SER RICO</button>
+    </div>
+
+    <div class="plano">
+        <h2>PLANO OURO</h2>
+        <p>💎 Vire um mago das finanças (e ganhe um certificado fake de especialista)!</p>
+        <button onclick="alert('Parabéns! Você agora é um "especialista" em memes financeiros. Mostre este print para zuar seus amigos!')">VIRAR GURU</button>
+    </div>
+
+    <p class="aviso">⚠️ AVISO: Este site é uma pegadinha! Nenhum dinheiro foi ou será investido. Apenas humor para amigos carentes de atenção.</p>
+
+    <script>
+        // Efeito de digitação no slogan
+        const slogans = [
+            '"Transformo R$10 em R$20... se você me der R$10 primeiro!"',
+            '"Minha estratégia? Pura sorte e um pouco de audácia!"',
+            '"100% de lucro? Só se você contar mentiras como eu!"'
+        ];
+        let current = 0;
+        function changeSlogan() {
+            document.querySelector('.slogan').textContent = slogans[current];
+            current = (current + 1) % slogans.length;
+        }
+        setInterval(changeSlogan, 3000);
+    </script>
 </body>
 </html>
