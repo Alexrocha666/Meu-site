@@ -1,23 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Streaming Gratuito</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Jogo do Tigrinho</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Bem-vindo ao Meu Site de Filmes</h1>
-  <div class="container">
-    <video id="player" controls>
-      <source src="https://archive.org/download/sample-mp4-file/sample_960x400_ocean_with_audio.mp4" type="video/mp4">
-      Seu navegador não suporta vídeos.
-    </video>
-    <div class="playlist">
-      <button onclick="loadMovie('https://archive.org/download/sample-mp4-file/sample_960x400_ocean_with_audio.mp4')">Filme 1</button>
-      <button onclick="loadMovie('https://archive.org/download/SampleVideo1280x7205mb/SampleVideo_1280x720_5mb.mp4')">Filme 2</button>
-    </div>
+  <h1>Jogo do Tigrinho</h1>
+  <div class="slot-machine">
+    <div class="reel" id="reel1">🐯</div>
+    <div class="reel" id="reel2">🍒</div>
+    <div class="reel" id="reel3">💰</div>
   </div>
+  <button onclick="spin()">Girar</button>
+  <p id="result"></p>
   <script src="script.js"></script>
 </body>
 </html>
